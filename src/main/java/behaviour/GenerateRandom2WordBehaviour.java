@@ -25,13 +25,15 @@ public class GenerateRandom2WordBehaviour extends Behaviour {
     }
 
     private List<String> generateRandom2WordMessagesFromAlphabet(List<String> inputAlphabet) {
-
-        Random r = new Random();
-        String firstRandomWord = inputAlphabet.get(r.nextInt(inputAlphabet.size()));
-        String secondRandomWord = inputAlphabet.get(r.nextInt(inputAlphabet.size()));
+        if(!inputAlphabet.isEmpty() && inputAlphabet!=null){
+            Random r = new Random();
+            String firstRandomWord = inputAlphabet.get(r.nextInt(inputAlphabet.size()));
+            String secondRandomWord = inputAlphabet.get(r.nextInt(inputAlphabet.size()));
 
 //        System.out.println("Generated - " + firstRandomWord + " / " + secondRandomWord);
-        return new ArrayList<>(Arrays.asList(firstRandomWord, secondRandomWord));
+            return new ArrayList<>(Arrays.asList(firstRandomWord, secondRandomWord));
+        }
+        return null;
     }
 
 }

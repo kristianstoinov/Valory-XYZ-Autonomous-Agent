@@ -15,4 +15,4 @@ Simple Autonomous Agent
 - Has one behaviour that generates random 2-word messages from an alphabet of 10 words (“hello”, “sun”, “world”, “space”, “moon”, “crypto”, “sky”, “ocean”, “universe”, “human”) every 2 seconds
 
 
-ConcurrentLinkedQueue is a good class for the goal
+ConcurrentLinkedQueue is a good class for the goal.

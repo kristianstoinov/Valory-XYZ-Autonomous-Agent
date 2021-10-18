@@ -21,11 +21,13 @@ public class FilterByWordMessageHandler extends MessageHandler {
 
 
     private void filterForWordAndPrintTheWholeMessage(String messages) {
-        String[] strings = messages.split(DELIMITER);
-        boolean wordIsFound = Arrays.stream(strings).anyMatch(x -> Objects.equals(x, wordToBeFilteredBy));
-        if (wordIsFound == true) {
-            System.out.println("Match found. Printing whole message.");
-            System.out.println(messages);
+        if(!messages.isEmpty() && messages!=null){
+            String[] strings = messages.split(DELIMITER);
+            boolean wordIsFound = Arrays.stream(strings).anyMatch(x -> Objects.equals(x, wordToBeFilteredBy));
+            if (wordIsFound == true) {
+                System.out.println("Match found. Printing whole message.");
+                System.out.println(messages);
+            }
         }
     }
 
